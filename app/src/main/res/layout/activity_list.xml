@@ -4,18 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sun.courseprj.ui.activity.MainActivity">
+    tools:context="com.sun.courseprj.ui.activity.ListActivity">
 
     <Button
+        android:layout_marginTop="8dp"
         android:id="@+id/base_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Base Layout"
+        android:background="@color/buttonBackGround"
+        android:textColor="@color/buttonTextColor"
         />
     <Button
+        android:layout_marginTop="8dp"
         android:id="@+id/base_ui"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/buttonBackGround"
+        android:textColor="@color/buttonTextColor"
         android:text="Base UI"/>
 
 </LinearLayout>

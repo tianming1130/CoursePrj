@@ -8,13 +8,13 @@ import android.widget.Button;
 
 import com.sun.courseprj.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class ListActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnBaseLayout,btnBaseUI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list);
 
         btnBaseLayout=(Button)findViewById(R.id.base_layout);
         btnBaseUI=(Button)findViewById(R.id.base_ui);
@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.base_layout:
-                startActivity(new Intent(MainActivity.this,BaseLayout.class));
+                startActivity(new Intent(ListActivity.this,BaseLayout.class));
                 break;
             case R.id.base_ui:
-                startActivity(new Intent(MainActivity.this,BaseUI.class));
+                startActivity(new Intent(ListActivity.this,BaseUI.class));
                 break;
         }
     }
