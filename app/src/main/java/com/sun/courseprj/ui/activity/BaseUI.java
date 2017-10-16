@@ -70,11 +70,12 @@ public class BaseUI extends AppCompatActivity implements View.OnClickListener{
             public void done(BmobUser bmobUser, BmobException e) {
                 if(e==null){
                     Toast.makeText(BaseUI.this,"登录成功:",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(BaseUI.this,MainActivity.class));
 
                     //通过BmobUser user = BmobUser.getCurrentUser()获取登录成功后的本地用户信息
                     //如果是自定义用户对象MyUser，可通过MyUser user = BmobUser.getCurrentUser(MyUser.class)获取自定义用户信息
                 }else{
-                    Toast.makeText(BaseUI.this,"登录失败:"+e.getMessage(),Toast.LENGTH_LONG).show();;
+                    Toast.makeText(BaseUI.this,"登录失败:"+e.getMessage(),Toast.LENGTH_LONG).show();
                 }
             }
         });
